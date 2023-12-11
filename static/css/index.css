@@ -57,6 +57,7 @@ body {
   color: #555;
   width: fit-content;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .publication-awards {
@@ -117,8 +118,6 @@ body {
 }
 
 .results-carousel video {
-  width: 50%;
-  height: 50%;
   margin: 0;
 }
 
@@ -128,4 +127,5 @@ body {
 
 .eql-cntrb {
   font-size: smaller;
+  margin-bottom: 10px;
 }
