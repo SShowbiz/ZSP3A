@@ -57,7 +57,6 @@ body {
   color: #555;
   width: fit-content;
   font-weight: bold;
-  margin-top: 20px;
 }
 
 .publication-awards {
@@ -113,7 +112,9 @@ body {
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  padding: 20px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
   font-size: 0;
 }
 
@@ -121,16 +122,31 @@ body {
   margin: 0;
 }
 
-.carousel-item {
-  flex: 0 0 auto;
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
   width: 100%;
 }
 
-.slider-pagination .slider-page {
-  background: #000000;
-}
-
-.eql-cntrb {
-  font-size: smaller;
-  margin-bottom: 10px;
+#interpolation-image-wrapper img {
+  border-radius: 5px;
 }
