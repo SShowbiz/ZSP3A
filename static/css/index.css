@@ -121,6 +121,11 @@ body {
   margin: 0;
 }
 
+.carousel-item {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
 .slider-pagination .slider-page {
   background: #000000;
 }
