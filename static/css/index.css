@@ -23,6 +23,11 @@ body {
   padding-bottom: 3rem;
 }
 
+.teaser .hero-image {
+  padding-top: 0;
+  padding-bottom: 0rem;
+}
+
 .teaser {
   font-family: 'Google Sans', sans-serif;
 }
@@ -123,7 +128,14 @@ body {
   flex-grow: 1;
   margin: 0 auto;
   position: relative;
-  width: 800px;
+  width: 40%;
+}
+
+.teasor-image-container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: 60%;
 }
 
 .results-carousel video {
