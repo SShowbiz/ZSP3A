@@ -23,11 +23,6 @@ body {
   padding-bottom: 3rem;
 }
 
-.teaser .hero-image {
-  padding-top: 0;
-  padding-bottom: 0rem;
-}
-
 .teaser {
   font-family: 'Google Sans', sans-serif;
 }
@@ -62,6 +57,7 @@ body {
   color: #555;
   width: fit-content;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .publication-awards {
@@ -118,28 +114,12 @@ body {
   margin: 5px;
   overflow: hidden;
   border-radius: 10px;
+  margin-bottom: 30px;
   font-size: 0;
-  height: 360px;
-}
-
-.carousel-container {
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: 40%;
-}
-
-.teasor-image-container {
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: 60%;
 }
 
 .results-carousel video {
   margin: 0;
-  height: 100%;
-  width: 100%;
 }
 
 .slider-pagination .slider-page {
