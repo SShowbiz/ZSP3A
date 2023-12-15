@@ -30,19 +30,21 @@
   <title>Zero-Shot Learning for the Primitives of 3D Affordance in General Objects</title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/js/video-comparison.js">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="static/js/video-comparison.js"></script>
 </head>
 
 <body>
@@ -259,32 +261,32 @@
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
             <video poster="" id="suitcase" autoplay controls muted loop playsinline>
-              <source src="./static/videos/suitcase.mp4" type="video/mp4">
+              <source src="./static/videos/samples/suitcase.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" id="skateboard" autoplay controls muted loop playsinline>
-              <source src="./static/videos/skateboard.mp4" type="video/mp4">
+              <source src="./static/videos/samples/skateboard.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" id="keyboard" autoplay controls muted loop playsinline>\
-              <source src="./static/videos/keyboard.mp4" type="video/mp4">
+              <source src="./static/videos/samples/keyboard.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" id="chair" autoplay controls muted loop playsinline>\
-              <source src="./static/videos/chair.mp4" type="video/mp4">
+              <source src="./static/videos/samples/chair.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" id="tennis racket" autoplay controls muted loop playsinline>\
-              <source src="./static/videos/tennis_racket.mp4" type="video/mp4">
+              <source src="./static/videos/samples/tennis_racket.mp4" type="video/mp4">
             </video>
           </div>
           <div class="item">
             <video poster="" id="shovel" autoplay controls muted loop playsinline>\
-              <source src="./static/videos/shovel.mp4" type="video/mp4">
+              <source src="./static/videos/samples/shovel.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -293,6 +295,117 @@
   </section>
   <!-- End video carousel -->
 
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title is-3 has-text-centered">Learned Primitives Represented with Contact</h2>
+
+
+        <div class="row">
+          <!-- MOTORCYCLE -->
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="motorcycle_human" loop playsinline autoplay muted
+                src="./static/videos/contact/motorcycle_human.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="motorcycle_humanMerge"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="motorcycle_object" loop playsinline autoplay muted
+                src="./static/videos/contact/motorcycle_object.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas height=0 class="videoMerge" id="motorcycle_objectMerge"></canvas>
+            </div>
+          </div>
+
+          <!-- KEYBOARD -->
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="keyboard_human" loop playsinline autoplay muted
+                src="./static/videos/contact/keyboard_human.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="keyboard_humanMerge"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="keyboard_object" loop playsinline autoplay muted
+                src="./static/videos/contact/keyboard_object.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="keyboard_objectMerge"></canvas>
+            </div>
+          </div>
+
+
+          <!-- SKATEBOARD -->
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="skateboard_human" loop playsinline autoplay muted
+                src="./static/videos/contact/skateboard_human.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="skateboard_humanMerge"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="skateboard_object" loop playsinline autoplay muted
+                src="./static/videos/contact/skateboard_object.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="skateboard_objectMerge"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <!-- SOCCER BALL -->
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="soccer_human" loop playsinline autoplay muted
+                src="./static/videos/contact/soccer_human.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="soccer_humanMerge"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="soccer_object" loop playsinline autoplay muted
+                src="./static/videos/contact/soccer_object.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas height=0 class="videoMerge" id="soccer_objectMerge"></canvas>
+            </div>
+          </div>
+
+          <!-- SUITCASE -->
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="suitcase_human" loop playsinline autoplay muted
+                src="./static/videos/contact/suitcase_human.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="suitcase_humanMerge"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="suitcase_object" loop playsinline autoplay muted
+                src="./static/videos/contact/suitcase_object.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="suitcase_objectMerge"></canvas>
+            </div>
+          </div>
+
+
+          <!-- TENNIS -->
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="tennis_human" loop playsinline autoplay muted
+                src="./static/videos/contact/tennis_human.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="tennis_humanMerge"></canvas>
+            </div>
+          </div>
+          <div class="col">
+            <div class="video-compare-container" style="width: 100%">
+              <video class="video" width=100% id="tennis_object" loop playsinline autoplay muted
+                src="./static/videos/contact/tennis_object.mp4" onplay="resizeAndPlay(this)"></video>
+              <canvas class="videoMerge" id="tennis_objectMerge"></canvas>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
 
 
 
