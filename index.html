@@ -275,7 +275,10 @@
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container">
-        <h2 class="title is-3 has-text-centered">Generated 3D Affordance Samples</h2>
+        <h2 class="title is-3 has-text-centered">Results</h2>
+        <h4 align="left" class="title is-4">Generated 3D Affordance Samples</h4>
+        <br />
+
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
             <video poster="" id="suitcase" autoplay controls muted loop playsinline>
@@ -308,17 +311,10 @@
             </video>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- End video carousel -->
 
-  <section class="hero is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3 has-text-centered">Learned Primitives Represented with Contact</h2>
-
-
+        <br />
+        <h4 align="left" class="title is-4">Contactual Affordance</h4>
+        <br />
         <div class="row">
           <!-- MOTORCYCLE -->
           <div class="col">
@@ -327,6 +323,7 @@
                 src="./static/videos/contact/motorcycle_human.mp4" onplay="resizeAndPlay(this)"></video>
               <canvas class="videoMerge" id="motorcycle_humanMerge"></canvas>
             </div>
+
           </div>
           <div class="col">
             <div class="video-compare-container" style="width: 100%">
@@ -370,7 +367,18 @@
           </div>
 
         </div>
-
+        <div class="row">
+          <div class="col">
+            <p class="has-text-centered">Motorcycle</p>
+          </div>
+          <div class="col">
+            <p class="has-text-centered">Keyboard</p>
+          </div>
+          <div class="col">
+            <p class="has-text-centered">Skateboard</p>
+          </div>
+        </div>
+        <br />
         <div class="row">
           <!-- SOCCER BALL -->
           <div class="col">
@@ -422,8 +430,28 @@
           </div>
 
         </div>
+        <div class="row">
+          <div class="col">
+            <p class="has-text-centered">Soccer Ball</p>
+          </div>
+          <div class="col">
+            <p class="has-text-centered">Suitcase</p>
+          </div>
+          <div class="col">
+            <p class="has-text-centered">Tennis Racket</p>
+          </div>
+        </div>
+        <br />
+        <br />
+        <h4 align="left" class="title is-4">Orientational Affordance</h4>
+        <br />
+
       </div>
+    </div>
   </section>
+  <!-- End video carousel -->
+
+
 
 
 
